@@ -6,13 +6,17 @@
 builder.Services.AddControllers();
 builder.Services.AddDbContext<SchoolContext>(options =>
 {
-    options.UseSqlServer("Server=stellasqldbdemo.database.windows.net;Database=SchoolDB;Trusted_Connection=False;Encrypt=True;");
+    options.UseSqlServer("Server=???;Database=SchoolDB;Trusted_Connection=False;Encrypt=True;");
 });
 ```
 ## Commands I used in Package Management Console
-add-migration InitialCreate
-update-database
+- add-migration InitialCreate
+- update-database
 
+## Shortcuts
+- Prop for a new method
+- ctor, constructor shortcut
+- 
 ## SQL queries 
 Create Department table
 ```sql
