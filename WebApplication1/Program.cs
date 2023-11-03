@@ -1,8 +1,14 @@
+using Microsoft.EntityFrameworkCore;
+using WebApplication1.Modules;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
+// Add services to the container
 builder.Services.AddControllers();
+builder.Services.AddDbContext<SchoolContext>(options =>
+{
+    options.UseSqlServer("Server=stellasqldbdemo.database.windows.net;Database=SchoolDB;Trusted_Connection=False;Encrypt=True;");
+});
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
